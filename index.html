@@ -6,20 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        *{
+          margin:0;
+          padding:0;
+        }
+        ul{
+          list-style:none;
+        }
         #box{
-            width: 500px;
-            height: 500px;
+          width:400px;
+          height:400px;
+          border:1px solid #000;
+        }
+        #options{
+          width:400px;
+          height:50px;
+          display:flex;
+          border-bottom:1px solid #000;
+        }
+        #options li{
+          flex:1;
+          border-right:1px solid #000;
+          box-sizing:border-box;
+          text-align:center;
+          line-height:50px;
+        }
+        #options li.active{
+          color:#f00;
+        }
+        #list{
+          width:400px;
+          height:350px;
+        }
+        #list li{
+          text-align:center;
+          font-size:50px;
+          line-height:350px;
+          display:none;
+        }
+        #list li.block{
+            display:block;
+
         }
     </style>
 </head>
 <body>
    <div id="box">
-       <ul>
-           <li>腾腾</li>
-           <li></li>
-           <li></li>
-           <li></li>
-       </ul>
-   </div>  
+         <ul id="options">
+             <li class="active">第一项</li>
+             <li>第二项</li>
+             <li>第三项</li>
+         </ul>
+         <ul id="list">
+             <li class="block">1</li>
+             <li>2</li>
+             <li>3</li>
+         </ul>
+   </div>
 </body>
+<script src="./index.js"></script>
 </html>
